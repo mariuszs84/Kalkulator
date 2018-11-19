@@ -15,6 +15,7 @@ public class Kalkulator {
         System.out.print("Podaj druga liczbe:\t\t");
         double b = scanner.nextDouble();
         System.out.println("\t\t\t\t=");
+        double c=1;
 
         if (znak.equals("+")) {
             System.out.println("\t\t\t\t" + (a + b));
@@ -25,7 +26,10 @@ public class Kalkulator {
         } else if (znak.equals("/")) {
             System.out.println("\t\t\t\t" + (a / b));
         } else if (znak.equals("^")) {
-            System.out.println("\t\t\t\t" + (pow(a, b)));
+            for(int i=0;i<b;i++){
+                c*=a;
+            }
+            System.out.println("\t\t\t\t"+c);
         } else {
             System.out.println("Operacja niedozwolona");
         }
